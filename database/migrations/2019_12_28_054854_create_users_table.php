@@ -23,10 +23,11 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->bigInteger('organization_id')->nullable();
             $table->foreign('organization_id')->references('id')->on('organization')->onDelete('no action')->onUpdate('no action');
-           // $table->bigInteger('doc_pack_id');
-            //$table->foreign('doc_pack_id')->references('id')->on('doc_pack')->onDelete('no action')->onUpdate('no action');
+            $table->bigInteger('doc_pack_id')->nullable();
+            $table->foreign('doc_pack_id')->references('id')->on('doc_pack')->onDelete('no action')->onUpdate('no action');
             $table->bigInteger('role_id');
             $table->foreign('role_id')->references('id')->on('role')->onDelete('no action')->onUpdate('no action');
+
 
             $table->rememberToken();
             $table->timestamps();

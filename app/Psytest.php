@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Psytest extends Model
+class PsyTest extends Model
 {
     //
 }
