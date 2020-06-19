@@ -36,4 +36,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function docpack(){
+        return $this ->hasMany('App\DocPack');
+    }
+
+    public function organizations(){
+        return $this ->hasMany('App\Organization');
+    }
+
+    public function roles(){
+        return $this ->hasMany('App\Role');
+    }
+
+    public function tenderuser(){
+        return $this ->belongsTo('App\TenderUser');
+    }
 }

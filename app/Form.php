@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PsyTest extends Model
+class Form extends Model
 {
-    protected $table = 'psy_test';
+    protected $table = 'form';
 
     public function docpack(){
         return $this ->belongsTo('App\DocPack');
