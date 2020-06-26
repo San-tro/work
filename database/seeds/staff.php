@@ -1,5 +1,6 @@
 <?php
 
+use App\Staffs;
 use Illuminate\Database\Seeder;
 
 class staff extends Seeder
@@ -11,6 +12,8 @@ class staff extends Seeder
      */
     public function run()
     {
+        factory(Staffs::class, 5)->create();
+        /*
         $int = rand(1,9);
         DB::table('staff')->insert([
 
@@ -19,5 +22,6 @@ class staff extends Seeder
             'patronymic' => str_random(10),
             'organization_id' => $int,
         ]);
+        */
     }
 }

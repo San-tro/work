@@ -20,6 +20,8 @@ class Organization extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('subdivision');
             $table->string('directors');
+            $table->bigInteger('staff_id');
+            $table->foreign('staff_id')->references('id')->on('staff')->onDelete('no action')->onUpdate('no action');
             $table->bigInteger('position_id');
             $table->foreign('position_id')->references('id')->on('position')->onDelete('no action')->onUpdate('no action');
             $table->timestamps();

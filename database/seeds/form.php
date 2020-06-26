@@ -1,5 +1,6 @@
 <?php
 
+use App\Forms;
 use Illuminate\Database\Seeder;
 
 class form extends Seeder
@@ -11,7 +12,8 @@ class form extends Seeder
      */
     public function run()
     {
-
+        factory(Forms::class, 5)->create();
+/*
         $int = rand(1,10);
         DB::table('form')->insert([
 
@@ -22,5 +24,6 @@ class form extends Seeder
             'maritalstatus' => str_random(10),
             'organization_id' => $int,
         ]);
+*/
     }
 }

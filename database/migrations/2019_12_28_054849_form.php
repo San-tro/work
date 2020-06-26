@@ -21,9 +21,9 @@ class Form extends Migration
             $table->string('address');
             $table->string('maritalstatus');
             //$table->bigInteger('doc_pack_id');
-            $table->bigInteger('organization_id');
+            //$table->bigInteger('organization_id');
             //$table->foreign('doc_pack_id')->references('id')->on('doc_pack')->onDelete('no action')->onUpdate('no action');
-            $table->foreign('organization_id')->references('id')->on('organization')->onDelete('no action')->onUpdate('no action');
+            //$table->foreign('organization_id')->references('id')->on('organization')->onDelete('no action')->onUpdate('no action');
             $table->timestamps();
         });
     }

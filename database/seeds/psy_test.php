@@ -1,5 +1,6 @@
 <?php
 
+use App\PsyTest;
 use Illuminate\Database\Seeder;
 
 class psy_test extends Seeder
@@ -11,6 +12,8 @@ class psy_test extends Seeder
      */
     public function run()
     {
+        factory(PsyTest::class, 5)->create();
+        /*
         $bool = rand(true, false);
         DB::table('psy_test')->insert([
 
@@ -19,5 +22,6 @@ class psy_test extends Seeder
             'patronymic' => str_random(10),
             'result' => $bool,
         ]);
+        */
     }
 }

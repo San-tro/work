@@ -18,8 +18,8 @@ class Staff extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('patronymic');
-            $table->bigInteger('organization_id');
-            $table->foreign('organization_id')->references('id')->on('organization')->onDelete('no action')->onUpdate('no action');
+            //$table->bigInteger('organization_id');
+            //$table->foreign('organization_id')->references('id')->on('organization')->onDelete('no action')->onUpdate('no action');
             $table->timestamps();
         });
     }

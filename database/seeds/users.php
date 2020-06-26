@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use Illuminate\Database\Seeder;
 
 class users extends Seeder
@@ -11,6 +12,8 @@ class users extends Seeder
      */
     public function run()
     {
+        factory(User::class, 5)->create();
+        /*
         $int1 = rand(1,10);
         DB::table('users')->insert([
 
@@ -23,5 +26,6 @@ class users extends Seeder
             'doc_pack_id' => $int1,
             'role_id' => $int1,
         ]);
+        */
     }
 }

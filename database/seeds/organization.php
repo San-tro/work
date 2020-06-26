@@ -1,5 +1,6 @@
 <?php
 
+use App\Organizations;
 use Illuminate\Database\Seeder;
 
 class organization extends Seeder
@@ -11,6 +12,8 @@ class organization extends Seeder
      */
     public function run()
     {
+        factory(Organizations::class, 5)->create();
+        /*
         $int = rand(1,10);
         DB::table('organization')->insert([
 
@@ -20,5 +23,6 @@ class organization extends Seeder
             'directors' => str_random(10),
             'position_id' => $int,
         ]);
+        */
     }
 }

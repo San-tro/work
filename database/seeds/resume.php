@@ -1,5 +1,6 @@
 <?php
 
+use App\Resumes;
 use Illuminate\Database\Seeder;
 
 class resume extends Seeder
@@ -11,6 +12,8 @@ class resume extends Seeder
      */
     public function run()
     {
+        factory(Resumes::class, 5)->create();
+        /*
         $int= mt_rand(0,1262055681);
         $string = date("Y-m-d H:i:s",$int);
         $phone = '000-000-0000';
@@ -29,5 +32,6 @@ class resume extends Seeder
             'endyear' => $string,
             'telephone' => $phone,
         ]);
+        */
     }
 }

@@ -7,7 +7,13 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/document_managment_system</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="postgres@localhost" uuid="cf39f939-b938-488f-baeb-7560fb2e4fa6">
+    <data-source source="LOCAL" name="books@localhost" uuid="cf39f939-b938-488f-baeb-7560fb2e4fa6">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/books</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="postgres@localhost [2]" uuid="56c15973-c75f-4b95-a274-a11a4b7fd760">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

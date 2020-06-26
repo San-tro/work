@@ -14,11 +14,12 @@ class TendersUsers extends Migration
     public function up()
     {
         Schema::create('tenders_users', function (Blueprint $table) {
-            //$table->bigIncrements('id');
+            $table->bigIncrements('id');
 
           //  $table->bigInteger('users_id');
           //  $table->bigInteger('tender_id');
            // $table->integer('id',true,true);
+
             $table->integer('tender_id')->unsigned();
             $table->integer('users_id')->unsigned();
            // $table->primary(array('[tender_id]' , '[users_id]'));
@@ -27,7 +28,7 @@ class TendersUsers extends Migration
 
 
             $table->timestamps();
-            $table->primary(array('tender_id','users_id'));
+            //$table->primary(array('tender_id','users_id'));
         });
     }
 

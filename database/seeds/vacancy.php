@@ -1,5 +1,6 @@
 <?php
 
+use App\Vacancys;
 use Illuminate\Database\Seeder;
 
 class vacancy extends Seeder
@@ -11,6 +12,9 @@ class vacancy extends Seeder
      */
     public function run()
     {
+
+        factory(Vacancys::class, 5)->create();
+        /*
         $int1 = rand(1,9);
         $bool = rand(true, false);
         $int= mt_rand(0,1262055681);
@@ -26,5 +30,6 @@ class vacancy extends Seeder
             'wayofeployment' => str_random(10),
             'organization_id' => $int1,
         ]);
+        */
     }
 }
