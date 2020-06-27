@@ -16,10 +16,10 @@ class Tender extends Migration
         Schema::create('tender', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('date');
-            $table->string('vacancy');
+            $table->string('vacancy')->nullable(true);
             $table->string('view');
             $table->string('personincharge');
-            $table->string('comment');
+            $table->string('comment')->nullable(true);
             //$table->bigInteger('tenders_users_id');
             $table->bigInteger('vacancy_id');
            // $table->foreign('tenders_users_id')->references('id')->on('tenders_users')->onDelete('no action')->onUpdate('no action');

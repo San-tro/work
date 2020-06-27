@@ -16,12 +16,12 @@ class Vacancy extends Migration
         Schema::create('vacancy', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('direction');
-            $table->string('vacancystatus');
-            $table->string('contactperson');
-            $table->string('manager');
-            $table->string('datestart');
-            $table->string('dateend');
-            $table->string('wayofeployment');
+            $table->string('vacancystatus')->nullable(true);
+            $table->string('contactperson')->nullable(true);
+            $table->string('manager')->nullable(true);
+            $table->string('datestart')->nullable(true);
+            $table->string('dateend')->nullable(true);
+            $table->string('wayofeployment')->nullable(true);
             $table->bigInteger('organization_id');
             $table->foreign('organization_id')->references('id')->on('organization')->onDelete('no action')->onUpdate('no action');
             $table->timestamps();

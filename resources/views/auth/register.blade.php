@@ -157,8 +157,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group row" style="display: none" >
+                            <label for="role_id" class="col-md-4 col-form-label text-md-right">{{ __('Role_id') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="role_id" type="text" class="form-control " value="2" name="role_id" value="{{ old('role_id') }}"  required autocomplete="role_id" autofocus >
+
+                            </div>
+                        </div>
+
+
+
+
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail организации') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -202,6 +214,7 @@
                                 </button>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -222,17 +235,6 @@
         document.getElementsByName('form1').style.visibility = "hidden";
         document.getElementsByName('form2').style.visibility = "visible";
     }
-
-
-    <input name="role" id="1" value="1" type="radio" onchange="
-                    document.getElementById('form2').style.display = 'none'
-                    document.getElementById('form1').style.display = 'block'">User
-                    <input name="role" id="2" value="2" type="radio" onchange="
-                    document.getElementById('form2').style.display = 'block'
-                    document.getElementById('form1').style.display = 'none'">Organizations
-
-
-
     }
 
 </script>

@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         })->toArray();
 
         TenderUser::insert($posts);
+        
     }
 }
